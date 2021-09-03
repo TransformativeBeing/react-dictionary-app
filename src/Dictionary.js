@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Dictionary.css";
 
 export default function Dictionary() {
   const [keyword, setKeyword] = useState(" ");
@@ -7,19 +8,21 @@ export default function Dictionary() {
     yo.preventDefault();
     alert(`Searching for ${keyword}...`);
   }
-  function handleKeyword(find) {
-    setKeyword(find.target.value);
+  function handleKeyword(show) {
+    setKeyword(show.target.value);
   }
 
   return (
     <div className="Dictionary">
       <form onSubmit={search} className="form row">
-        <input
-          type="search"
-          onChange={handleKeyword}
-          placeholder="Search word"
-          className="search-bar form-control col-3"
-        />
+        <div className="search-bar col-11">
+          <input
+            type="search"
+            onChange={handleKeyword}
+            placeholder="Search word"
+            className="form-control"
+          />
+        </div>
       </form>
     </div>
   );

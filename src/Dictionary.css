@@ -1,3 +1,4 @@
 .Dictionary .search-bar {
-  max-width: 10px !important;
+  max-width: 600px;
+  margin: 0 auto;
 }

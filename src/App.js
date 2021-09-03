@@ -1,12 +1,13 @@
 import "./App.css";
 import Dictionary from "./Dictionary";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <header className="App-header">
+        <header className="App-header row">
           <h1>Dictionary</h1>
+          <h4>What words are you curious to discover!</h4>
         </header>
         <main className="App-main">
           <Dictionary />
@@ -16,5 +17,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
