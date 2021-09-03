@@ -12,7 +12,8 @@ export default function App() {
         <main className="App-main">
           <Dictionary />
         </main>
-        <footer className="App-footer"></footer>
+        <br />
+        <footer className="App-footer">Coded by Jessica Nolte</footer>
       </div>
     </div>
   );
