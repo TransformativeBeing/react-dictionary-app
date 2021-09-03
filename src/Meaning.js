@@ -9,7 +9,7 @@ export default function Meaning({ meaningData }) {
         return (
           <div key={index} className="row mb-3">
             <p>
-              {definition.definition}
+              <span className="definition">{definition.definition}</span>
               <br />
               <em>{definition.example}</em>
             </p>
