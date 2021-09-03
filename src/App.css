@@ -6,3 +6,8 @@
 .App h4 {
   color: #ab47bc;
 }
+
+.App .Footer {
+  font-family: monospace;
+  opacity: 0.65;
+}

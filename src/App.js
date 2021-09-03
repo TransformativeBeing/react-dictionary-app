@@ -1,4 +1,5 @@
 import "./App.css";
+import Footer from "./Footer";
 import Dictionary from "./Dictionary";
 
 export default function App() {
@@ -13,7 +14,7 @@ export default function App() {
           <Dictionary />
         </main>
         <br />
-        <footer className="App-footer">Coded by Jessica Nolte</footer>
+        <Footer />
       </div>
     </div>
   );
