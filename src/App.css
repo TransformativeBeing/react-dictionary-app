@@ -1,9 +1,11 @@
 .App {
   margin-top: 25px;
 }
-
+.App h1 {
+  color: #27296d;
+}
 .App h4 {
-  color: #ab47bc;
+  color: #f5c7f7;
 }
 
 .App .Footer {

@@ -3,8 +3,9 @@ import axios from "axios";
 import Results from "./Results";
 import "./Dictionary.css";
 
-export default function Dictionary() {
-  const [keyword, setKeyword] = useState(" ");
+export default function Dictionary(defaultKeyword) {
+  console.log(defaultKeyword);
+  const [keyword, setKeyword] = useState({ defaultKeyword });
   const [results, setResults] = useState(null);
 
   function search(event) {
@@ -26,17 +27,21 @@ export default function Dictionary() {
 
   return (
     <div className="Dictionary">
-      <form onSubmit={search} className="form row">
-        <div className="search-bar col-12">
-          <input
-            type="search"
-            onChange={handleKeyword}
-            placeholder="Search word"
-            className="form-control"
-          />
-        </div>
-      </form>
-      <Results resultsData={results} />
+      <section>
+        <form onSubmit={search} className="form row">
+          <div className="search-bar col-12">
+            <input
+              type="search"
+              onChange={handleKeyword}
+              placeholder="Search word"
+              className="form-control"
+            />
+          </div>
+        </form>
+      </section>
+      <section>
+        <Results resultsData={results} />
+      </section>
     </div>
   );
 }

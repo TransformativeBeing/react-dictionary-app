@@ -2,3 +2,11 @@
   max-width: 600px;
   margin: 0 auto;
 }
+
+.Dictionary section {
+  background: white;
+  padding: 30px;
+  border-radius: 6px;
+  box-shadow: 0 10px 10px rgb(0 0 0 / 10%);
+  margin: 20px 0;
+}
