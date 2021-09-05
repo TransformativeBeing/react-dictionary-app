@@ -18,7 +18,7 @@ export default function Dictionary({ defaultKeyword }) {
 
     const pexelsApiKey =
       "563492ad6f91700001000001d17fcfe2befd47d98f9313e611360597";
-    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=6`;
     let header = { Authorization: `Bearer ${pexelsApiKey}` };
     axios
       .get(pexelsApiUrl, {

@@ -9,7 +9,7 @@ export default function Photos({ photosData, alt }) {
           {photosData.map(function (photo, index) {
             return (
               <div
-                className="col-auto d-flex align-items-center mb-3"
+                className="col-md-2 col-4 d-flex align-items-center mb-4"
                 key={index}
               >
                 <a href={photo.src.original} target="_blank" rel="noreferrer">
