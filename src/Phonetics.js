@@ -1,5 +1,6 @@
 import React from "react";
 import ReactAudioPlayer from "react-audio-player";
+// npm React Audio Player documentation: https://www.npmjs.com/package/react-audio-player
 
 export default function Phonetics({ phoneticsData }) {
   return (

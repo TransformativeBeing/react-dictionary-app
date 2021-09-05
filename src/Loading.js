@@ -1,5 +1,6 @@
 import React from "react";
 import { SpinnerDotted } from "spinners-react";
+// npm spinner documentation: https://www.npmjs.com/package/spinners-react
 
 export default function Loading({ size, color }) {
   return (
