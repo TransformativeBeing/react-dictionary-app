@@ -20,7 +20,7 @@ export default function Dictionary() {
   }
 
   function handleResponse(response) {
-    console.log(response.data);
+    //console.log(response.data);
     setResults(response.data[0]);
   }
 
@@ -36,7 +36,7 @@ export default function Dictionary() {
           />
         </div>
       </form>
-      <Results data={results} />
+      <Results resultsData={results} />
     </div>
   );
 }

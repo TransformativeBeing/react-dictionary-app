@@ -6,3 +6,8 @@
 .Results .definition {
   color: #aa47bcd0;
 }
+
+.Results .phonetic {
+  position: relative;
+  bottom: 22px;
+}
