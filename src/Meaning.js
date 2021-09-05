@@ -13,7 +13,7 @@ export default function Meaning({ meaningData }) {
               <p>
                 <span className="definition">{definition.definition}</span>
                 <br />
-                <em>{definition.example}</em>
+                <em className="examples">{definition.example}</em>
               </p>
               <Synonyms synonymsData={definition} />
             </div>

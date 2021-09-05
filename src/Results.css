@@ -1,13 +1,23 @@
-.Results {
-  max-width: 570px;
-  margin: 0 auto;
-}
-
-.Results .definition {
-  color: #aa47bcd0;
+.Results .word {
+  color: var(--light-text-color);
+  text-shadow: var(--outline);
+  margin-bottom: 33px;
 }
 
 .Results .phonetic {
   position: relative;
-  bottom: 22px;
+  bottom: 70px;
+  right: 300px;
+}
+
+.Results .definition {
+  color: var(--dark-text-color);
+}
+
+.Results .examples {
+  color: var(--light-text-color);
+}
+
+.Results .Synonyms {
+  color: var(--dark-text-color);
 }

@@ -8,21 +8,25 @@ export default function Results({ resultsData }) {
   if (resultsData) {
     return (
       <div className="Results">
-        <h3 className="word mt-1">{resultsData.word}</h3>
-        {resultsData.phonetics.map(function (phonetics, index) {
-          return (
-            <div key={index}>
-              <Phonetics phoneticsData={phonetics} />
-            </div>
-          );
-        })}
-        {resultsData.meanings.map(function (meaning, index) {
-          return (
-            <div key={index} className="word-meaning mt-3">
-              <Meaning meaningData={meaning} />
-            </div>
-          );
-        })}
+        <section>
+          <h2 className="word text-start">{resultsData.word}</h2>
+          {resultsData.phonetics.map(function (phonetics, index) {
+            return (
+              <div key={index}>
+                <Phonetics phoneticsData={phonetics} />
+              </div>
+            );
+          })}
+        </section>
+        <section>
+          {resultsData.meanings.map(function (meaning, index) {
+            return (
+              <div key={index} className="word-meaning">
+                <Meaning meaningData={meaning} />
+              </div>
+            );
+          })}
+        </section>
       </div>
     );
   } else {

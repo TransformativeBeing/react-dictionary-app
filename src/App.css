@@ -2,13 +2,26 @@
   margin-top: 25px;
 }
 .App h1 {
-  color: #27296d;
+  color: var(--light-text-color);
+  text-shadow: var(--outline);
+  font-size: 96px;
 }
 .App h4 {
-  color: #f5c7f7;
+  color: var(--dark-text-color);
 }
 
 .App .Footer {
   font-family: monospace;
+  color: var(--light-text-color);
   opacity: 0.65;
+}
+
+.App .Footer a {
+  color: var(--dark-text-color);
+  text-decoration: none;
+}
+
+.App .Footer a:hover {
+  color: var(--light-text-color);
+  text-decoration: underline;
 }
