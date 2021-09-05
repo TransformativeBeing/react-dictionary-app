@@ -4,7 +4,7 @@
 .App h1 {
   color: var(--light-text-color);
   text-shadow: var(--outline);
-  font-size: 96px;
+  font-size: 90px;
 }
 .App h4 {
   color: var(--dark-text-color);
