@@ -5,7 +5,6 @@ import Photos from "./Photos";
 import "./Results.css";
 
 export default function Results({ resultsData, photosData, alt }) {
-  //console.log(resultsData);
   if (resultsData) {
     return (
       <div className="Results">

@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function Photos({ photosData, alt }) {
-  //console.log(alt);
   if (photosData) {
     return (
       <div className="Photos">

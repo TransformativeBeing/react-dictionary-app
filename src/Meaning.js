@@ -2,7 +2,6 @@ import React from "react";
 import Synonyms from "./Synonyms";
 
 export default function Meaning({ meaningData }) {
-  //console.log(meaningData);
   return (
     <div className="Meaning">
       <section>

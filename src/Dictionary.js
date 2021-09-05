@@ -5,7 +5,6 @@ import Loading from "./Loading";
 import "./Dictionary.css";
 
 export default function Dictionary({ defaultKeyword }) {
-  //console.log(defaultKeyword);
   const [keyword, setKeyword] = useState(defaultKeyword);
   const [results, setResults] = useState(null);
   const [loaded, setLoaded] = useState(false);
@@ -16,6 +15,7 @@ export default function Dictionary({ defaultKeyword }) {
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
     axios.get(apiUrl).then(handleDictionaryResponse);
 
+    // documentation: https://www.pexels.com/api/documentation/#photos-search
     const pexelsApiKey =
       "563492ad6f91700001000001d17fcfe2befd47d98f9313e611360597";
     let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=6`;
@@ -26,20 +26,18 @@ export default function Dictionary({ defaultKeyword }) {
       })
       .then(handlePexelsResponse);
   }
+  function handleDictionaryResponse(response) {
+    setResults(response.data[0]);
+  }
+  function handlePexelsResponse(response) {
+    setPhotos(response.data.photos);
+  }
   function handleSubmit(event) {
     event.preventDefault();
     search();
   }
   function handleKeyword(fetch) {
     setKeyword(fetch.target.value);
-  }
-  function handleDictionaryResponse(response) {
-    //console.log(response.data);
-    setResults(response.data[0]);
-  }
-  function handlePexelsResponse(response) {
-    //console.log(response.data);
-    setPhotos(response.data.photos);
   }
   function load() {
     setLoaded(true);
