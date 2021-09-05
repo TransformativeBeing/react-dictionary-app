@@ -12,6 +12,6 @@
 }
 
 .Dictionary .hints {
-  color: var(--light-text-color);
+  color: var(--medium-text-color);
   font-size: 14px;
 }
