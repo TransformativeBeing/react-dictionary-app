@@ -18,7 +18,6 @@ export default function Results({ resultsData }) {
             );
           })}
         </section>
-        <section>
           {resultsData.meanings.map(function (meaning, index) {
             return (
               <div key={index} className="word-meaning">
@@ -26,7 +25,6 @@ export default function Results({ resultsData }) {
               </div>
             );
           })}
-        </section>
       </div>
     );
   } else {

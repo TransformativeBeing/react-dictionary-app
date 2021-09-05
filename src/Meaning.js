@@ -5,23 +5,23 @@ export default function Meaning({ meaningData }) {
   //console.log(meaningData);
   return (
     <div className="Meaning">
-      <h4>{meaningData.partOfSpeech}</h4>
-      {meaningData.definitions.map(function (definition, index) {
-        if (definition) {
-          return (
-            <div key={index} className="row mb-3">
-              <p>
-                <span className="definition">{definition.definition}</span>
+      <section>
+        <h4 className="searched-word">{meaningData.partOfSpeech}</h4>
+        {meaningData.definitions.map(function (definition, index) {
+          if (definition) {
+            return (
+              <div key={index} className="row mb-3">
+                <div className="definition">{definition.definition}</div>
                 <br />
                 <em className="examples">{definition.example}</em>
-              </p>
-              <Synonyms synonymsData={definition} />
-            </div>
-          );
-        } else {
-          return null;
-        }
-      })}
+                <Synonyms synonymsData={definition} />
+              </div>
+            );
+          } else {
+            return null;
+          }
+        })}
+      </section>
     </div>
   );
 }
