@@ -9,11 +9,22 @@ export default function Dictionary({ defaultKeyword }) {
   const [keyword, setKeyword] = useState(defaultKeyword);
   const [results, setResults] = useState(null);
   const [loaded, setLoaded] = useState(false);
+  const [photos, setPhotos] = useState(null);
 
   function search() {
     // documentation: https://dictionaryapi.dev/
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
-    axios.get(apiUrl).then(handleResponse);
+    axios.get(apiUrl).then(handleDictionaryResponse);
+
+    const pexelsApiKey =
+      "563492ad6f91700001000001d17fcfe2befd47d98f9313e611360597";
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=8`;
+    let header = { Authorization: `Bearer ${pexelsApiKey}` };
+    axios
+      .get(pexelsApiUrl, {
+        headers: header,
+      })
+      .then(handlePexelsResponse);
   }
   function handleSubmit(event) {
     event.preventDefault();
@@ -22,9 +33,13 @@ export default function Dictionary({ defaultKeyword }) {
   function handleKeyword(fetch) {
     setKeyword(fetch.target.value);
   }
-  function handleResponse(response) {
+  function handleDictionaryResponse(response) {
     //console.log(response.data);
     setResults(response.data[0]);
+  }
+  function handlePexelsResponse(response) {
+    //console.log(response.data);
+    setPhotos(response.data.photos);
   }
   function load() {
     setLoaded(true);
@@ -52,7 +67,7 @@ export default function Dictionary({ defaultKeyword }) {
             hints: brave, yoga, plant, supercalifragilisticexpialidocious...
           </div>
         </section>
-        <Results resultsData={results} />
+        <Results resultsData={results} photosData={photos} alt={keyword} />
       </div>
     );
   } else {

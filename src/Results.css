@@ -20,3 +20,7 @@
 .Results .Synonyms {
   color: var(--medium-text-color);
 }
+
+.Results .Photos .images {
+  max-width: 98px;
+}

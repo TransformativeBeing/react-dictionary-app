@@ -11,7 +11,7 @@ export default function Phonetics({ phoneticsData }) {
         src={phoneticsData.audio}
         autoPlay={false}
         controls={true}
-        children="null"
+        children={true}
       />
     </div>
   );
