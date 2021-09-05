@@ -36,7 +36,7 @@ export default function Dictionary({ defaultKeyword }) {
       <div className="Dictionary">
         <section>
           <h4 className="text-center">
-            What words are you curious to discover!
+            What words are you curious to discover?
           </h4>
           <form onSubmit={handleSubmit} className="form row">
             <div className="search-bar col-12">

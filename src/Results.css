@@ -1,13 +1,12 @@
 .Results .word {
   color: var(--light-text-color);
   text-shadow: var(--outline);
-  margin-bottom: 33px;
 }
 
 .Results .phonetic {
+  font-size: 24px;
   position: relative;
-  bottom: 70px;
-  right: 300px;
+  bottom: 22px;
 }
 
 .Results .definition {
