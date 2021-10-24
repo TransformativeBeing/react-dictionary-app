@@ -12,7 +12,7 @@ export default function Footer() {
         >
           Open-Source Code
         </a>
-        <span> by Jessica Nolte</span>
+        <span> by Jessica N.</span>
       </div>
     </div>
   );
